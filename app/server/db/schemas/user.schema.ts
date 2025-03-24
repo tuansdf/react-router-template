@@ -6,5 +6,5 @@ export const userSchema = sqliteTable(
   {
     id: text("id").$defaultFn(() => uuid()),
   },
-  (table) => [index("user_id_idx").on(table.id)]
+  (table) => [index("user_id_idx").on(table.id)],
 );

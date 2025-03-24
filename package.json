@@ -1,5 +1,5 @@
 {
-  "name": "template-react-fullstack",
+  "name": "react-router-template",
   "private": true,
   "type": "module",
   "scripts": {
@@ -39,6 +39,7 @@
     "@types/node": "^22.13.10",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-legacy": "^6.0.2",
     "cross-env": "^7.0.3",
     "drizzle-kit": "^0.30.5",
     "postcss": "^8.5.3",
@@ -46,8 +47,12 @@
     "postcss-preset-mantine": "^1.17.0",
     "postcss-simple-vars": "^7.0.1",
     "sass": "1.77.6",
+    "terser": "^5.39.0",
     "typescript": "^5.8.2",
     "vite": "^6.2.1",
     "vite-tsconfig-paths": "^5.1.4"
-  }
+  },
+  "browserslist": [
+    "> 0.5% and not dead"
+  ]
 }
