@@ -1,5 +1,5 @@
-import { MantineProvider } from "@/lib/mantine-provider";
-import { ColorSchemeScript, mantineHtmlProps } from "@mantine/core";
+import { AntdProvider } from "@/lib/antd-provider.js";
+import { QueryProvider } from "@/lib/query-provider.js";
 import type { PropsWithChildren } from "react";
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import type { Route } from "./+types/root";
@@ -7,11 +7,10 @@ import "@/styles";
 
 export function Layout({ children }: PropsWithChildren) {
   return (
-    <html lang="en" {...mantineHtmlProps}>
+    <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <ColorSchemeScript />
         <Meta />
         <Links />
       </head>
@@ -26,9 +25,11 @@ export function Layout({ children }: PropsWithChildren) {
 
 export default function App() {
   return (
-    <MantineProvider>
-      <Outlet />
-    </MantineProvider>
+    <QueryProvider>
+      <AntdProvider>
+        <Outlet />
+      </AntdProvider>
+    </QueryProvider>
   );
 }
 
